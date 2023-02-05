@@ -23,7 +23,7 @@ function MovieShown(){
                     <div className="row" >
                         <div className="contain">
                             <i className="bi bi-arrow-left-square-fill to-home" onClick={()=>{
-                                navigator('/');
+                                navigator('/movies/');
                             }}></i>
                             <div className="sora">
                                 <img  src={`https://image.tmdb.org/t/p/w500/${movi.poster_path}`} alt={movi.title} />

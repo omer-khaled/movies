@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-
+import ContextApi from './Component/ContextApi';
+import Home from './Component/Home';
+import { SkeletonTheme } from 'react-loading-skeleton';
+import { Routes,Route } from 'react-router-dom';
+import MovieShown from './Component/MovieShown';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SkeletonTheme baseColor='#313131' highlightColor='#525252'>
+      <ContextApi>
+        <div className="App container-fluid">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/:id" element={<MovieShown />} />
+          </Routes>
+        </div>
+      </ContextApi>
+    </SkeletonTheme>
   );
 }
 

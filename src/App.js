@@ -10,8 +10,8 @@ function App() {
       <ContextApi>
         <div className="App container-fluid">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/:id" element={<MovieShown />} />
+            <Route path="/movies/" element={<Home />} />
+            <Route path="/movies/:id" element={<MovieShown />} />
           </Routes>
         </div>
       </ContextApi>

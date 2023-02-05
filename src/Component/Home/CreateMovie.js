@@ -7,7 +7,7 @@ function CreateMovie({movie}){
         <div className="card-parent">
             <div className="card" key={movie.id}>
                 <img src={`${img}`} alt={`${movie.original_title}`} />
-                <Link className='link' to={`/${movie.id}`}>
+                <Link className='link' to={`/movies/${movie.id}`}>
                     <div className="icon">
                         <i className="bi bi-eye-fill"></i>
                     </div>
